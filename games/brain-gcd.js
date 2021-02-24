@@ -1,30 +1,21 @@
 import readlineSync from 'readline-sync';
 import getRandomInt from '../src/utils.js';
 
-const operations = {
-  1: '+',
-  2: '-',
-  3: '*',
+const gcd = (num1, num2) => {
+  const [max, min] = num1 > num2 ? [num1, num2] : [num2, num1];
+  const divider = max % min;
+  if (divider === 0) {
+    return min;
+  }
+  return gcd(min, divider);
 };
 
 const getAnswer = () => {
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   const number1 = getRandomInt();
   const number2 = getRandomInt();
-  const operation = operations[getRandomInt(3)];
-  let expectedAnswer;
-  switch (operation) {
-    case '+':
-      expectedAnswer = number1 + number2;
-      break;
-    case '-':
-      expectedAnswer = number1 - number2;
-      break;
-    default:
-      expectedAnswer = number1 * number2;
-      break;
-  }
-  console.log(`Question: ${number1} ${operation} ${number2}`);
+  const expectedAnswer = gcd(number1, number2);
+  console.log(`Question: ${number1} ${number2}`);
   const answer = readlineSync.question('Your answer: ');
 
   const isCorrectAnswer = Number(answer) === expectedAnswer;

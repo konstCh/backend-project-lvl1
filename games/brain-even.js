@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-
-const getRandomInt = (max = 100) => Math.floor(Math.random() * Math.floor(max) + 1);
+import getRandomInt from '../src/utils.js';
 
 const getAnswer = () => {
   const correctAnswer = 'yes';

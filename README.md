@@ -5,4 +5,9 @@
 
 ![Eslint Status](https://github.com/konstCh/backend-project-lvl1/workflows/lint/badge.svg)
 
-https://asciinema.org/connect/084039fd-df79-4ae5-939a-5eee4753ed70
+Brain-even https://asciinema.org/connect/084039fd-df79-4ae5-939a-5eee4753ed70
+
+Brain-calc https://asciinema.org/a/FAicyDnHwnJ6fWRNhZNnYgzhG
+
+Brain-gcd  https://asciinema.org/a/9DkiOMRZfUSbE7HRj58jfmdUo
+
