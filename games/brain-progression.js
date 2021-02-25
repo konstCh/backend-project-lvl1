@@ -20,7 +20,7 @@ const getAnswer = () => {
   const indexToHide = getRandomInt(count) - 1;
   const expectedAnswer = progression[indexToHide];
   progression[indexToHide] = '..';
-  console.log(`Question: ${progression}`);
+  console.log(`Question: ${progression.join(' ')}`);
   const answer = readlineSync.question('Your answer: ');
 
   const isCorrectAnswer = Number(answer) === expectedAnswer;
