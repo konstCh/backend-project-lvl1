@@ -25,9 +25,12 @@ const play = (game) => {
     } else {
       currentCorrectAnswers = 0;
       console.log(`Let's try again, ${userName}!`);
+      break;
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  if (currentCorrectAnswers > 0) {
+    console.log(`Congratulations, ${userName}!`);
+  }
 };
 
 export default play;
